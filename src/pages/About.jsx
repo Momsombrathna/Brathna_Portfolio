@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import Profile from '../assets/profile.png';
 import { MdOutlinePerson } from 'react-icons/md';
+import Pic from '../assets/pic.jpg';
 
 
 
@@ -15,7 +16,7 @@ function About(props) {
                 </div>
                 <div className='flex flex-col md:flex-row items-center  justify-center gap-10'>
                     <div className='avatar md:mt-0 mt-5'>
-                        <img src={Profile} alt="" className=' rounded-full' />
+                        <img src={Pic} alt="" className=' w-full h-full rounded-full' />
                     </div>
                 <div className=' md:w-1/2 max-w-full'>
                     <p className=' text-indigo-200 text-base'> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Hello! my name is 
