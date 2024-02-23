@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Navbar,
   MobileNav,
@@ -7,97 +7,163 @@ import {
   IconButton,
   Card,
 } from "@material-tailwind/react";
-import  Logo  from '../assets/logo.png';
-
+import Logo from "../assets/logo.png";
 
 function Nav(props) {
   const [openNav, setOpenNav] = React.useState(false);
-  
-    React.useEffect(() => {
-      window.addEventListener(
-        "resize",
-        () => window.innerWidth >= 960 && setOpenNav(false)
-      );
-    }, []);
 
-    // define a function that will close the navbar
-    const closeNav = () => {
-      setOpenNav(false);
-    };
-
-    // destructure the props
-    const { scrollToRef, homeRef, aboutRef, skillRef, projectRef, contactRef } =
-    props;
-  
-    const navList = (
-      <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row  lg:items-center lg:gap-6">
-        <Typography
-          as="li"
-          variant="small"
-          color="blue-gray"
-          className="font-sans text-lg"
-          // pass the closeNav function as a prop
-          closeNav={closeNav}
-        >
-          <a href="#" className="flex text-white hover:underline md:p-0 p-2 px-2 md:px-2  rounded-2xl items-center">
-        
-          <button onClick={() => {scrollToRef(homeRef); closeNav();}}>Home</button>
-          </a>
-        </Typography>
-        <Typography
-          as="li"
-          variant="small"
-          color="blue-gray"
-          className="font-sans text-lg"
-          // pass the closeNav function as a prop
-          closeNav={closeNav}
-        >
-          <a href="#" className="flex text-white hover:underline  md:p-0 p-2  px-2 md:px-2 rounded-2xl  items-center">
-          
-          <button onClick={() => {scrollToRef(aboutRef); closeNav();}}>About</button>
-          </a>
-        </Typography>
-        <Typography
-          as="li"
-          variant="small"
-          color="blue-gray"
-          className="font-sans text-lg"
-          // pass the closeNav function as a prop
-          closeNav={closeNav}
-        >
-          <a href="#" className="flex listpadding text-white hover:underline  md:p-0 p-2 px-2 md:px-2 rounded-2xl  items-center">
-        
-          <button onClick={() => {scrollToRef(skillRef); closeNav();}}>Skill</button>
-          </a>
-        </Typography>
-        <Typography
-          as="li"
-          variant="small"
-          color="blue-gray"
-          className="font-sans text-lg"
-          // pass the closeNav function as a prop
-          closeNav={closeNav}
-        >
-          <a href="#" className="flex text-white hover:underline md:p-0 p-2 px-2 md:px-2 rounded-2xl items-center">
-       
-          <button onClick={() => {scrollToRef(projectRef); closeNav();}}>Project</button>
-          </a>
-        </Typography>
-        <Typography
-          as="li"
-          variant="small"
-          color="blue-gray"
-          className="font-sans text-lg"
-          // pass the closeNav function as a prop
-          closeNav={closeNav}
-        >
-          <a href="#" className="flex text-white hover:underline md:p-0 p-2 px-2 md:px-2 rounded-2xl items-center">
-     
-         <button onClick={() => {scrollToRef(contactRef); closeNav();}}>Contact</button>
-         </a>
-       </Typography>
-     </ul>
+  React.useEffect(() => {
+    window.addEventListener(
+      "resize",
+      () => window.innerWidth >= 960 && setOpenNav(false)
     );
+  }, []);
+
+  // define a function that will close the navbar
+  const closeNav = () => {
+    setOpenNav(false);
+  };
+
+  // destructure the props
+  const { scrollToRef, homeRef, aboutRef, skillRef, projectRef, contactRef } =
+    props;
+
+  const navList = (
+    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row  lg:items-center lg:gap-6">
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="font-sans text-lg"
+        // pass the closeNav function as a prop
+        closeNav={closeNav}
+      >
+        <a
+          href="#"
+          className="flex text-white hover:underline md:p-0 p-2 px-2 md:px-2  rounded-2xl items-center"
+        >
+          <button
+            onClick={() => {
+              scrollToRef(homeRef);
+              closeNav();
+            }}
+          >
+            Home
+          </button>
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="font-sans text-lg"
+        // pass the closeNav function as a prop
+        closeNav={closeNav}
+      >
+        <a
+          href="#"
+          className="flex text-white hover:underline  md:p-0 p-2  px-2 md:px-2 rounded-2xl  items-center"
+        >
+          <button
+            onClick={() => {
+              scrollToRef(aboutRef);
+              closeNav();
+            }}
+          >
+            About
+          </button>
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="font-sans text-lg"
+        // pass the closeNav function as a prop
+        closeNav={closeNav}
+      >
+        <a
+          href="#"
+          className="flex listpadding text-white hover:underline  md:p-0 p-2 px-2 md:px-2 rounded-2xl  items-center"
+        >
+          <button
+            onClick={() => {
+              scrollToRef(skillRef);
+              closeNav();
+            }}
+          >
+            Skill
+          </button>
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="font-sans text-lg"
+        // pass the closeNav function as a prop
+        closeNav={closeNav}
+      >
+        <a
+          href="#"
+          className="flex text-white hover:underline md:p-0 p-2 px-2 md:px-2 rounded-2xl items-center"
+        >
+          <button
+            onClick={() => {
+              scrollToRef(projectRef);
+              closeNav();
+            }}
+          >
+            Project
+          </button>
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="font-sans text-lg"
+        // pass the closeNav function as a prop
+        closeNav={closeNav}
+      >
+        <a
+          href="#"
+          className="flex text-white hover:underline md:p-0 p-2 px-2 md:px-2 rounded-2xl items-center"
+        >
+          <button
+            onClick={() => {
+              scrollToRef(contactRef);
+              closeNav();
+            }}
+          >
+            Contact
+          </button>
+        </a>
+      </Typography>
+
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="font-sans text-lg"
+        // pass the closeNav function as a prop
+        closeNav={closeNav}
+      >
+        <a
+          href="/resume"
+          className="flex text-white hover:underline md:p-0 p-2 px-2 md:px-2 rounded-2xl items-center"
+        >
+          <button
+            onClick={() => {
+              closeNav();
+            }}
+          >
+            Resume
+          </button>
+        </a>
+      </Typography>
+    </ul>
+  );
   return (
     <>
       <div className="">
@@ -106,12 +172,15 @@ function Nav(props) {
             <Typography
               as="a"
               href="#"
-              className="mr-4 cursor-pointer py-1.5  font-sans  text-2xl">
-              <div className='flex flex-row gap-2 justify-center items-center'>
-                <img src={Logo} alt="logo" className=' w-auto h-16' />
-                <div className='flex flex-col'>
-                  <p className='font-bold md:text-2xl text-xl'>Mom Sombrathna</p>
-                  <p className='text-white text-sm font-thin'>portfolio</p>
+              className="mr-4 cursor-pointer py-1.5  font-sans  text-2xl"
+            >
+              <div className="flex flex-row gap-2 justify-center items-center">
+                <img src={Logo} alt="logo" className=" w-auto h-16" />
+                <div className="flex flex-col">
+                  <p className="font-bold md:text-2xl text-xl">
+                    Mom Sombrathna
+                  </p>
+                  <p className="text-white text-sm font-thin">portfolio</p>
                 </div>
               </div>
             </Typography>
@@ -156,7 +225,7 @@ function Nav(props) {
               </IconButton>
             </div>
           </div>
-          <MobileNav open={openNav} className=' md:ml-0 ml-5'>
+          <MobileNav open={openNav} className=" md:ml-0 ml-5">
             {navList}
           </MobileNav>
         </nav>
