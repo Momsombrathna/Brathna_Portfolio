@@ -2,6 +2,7 @@ import React from "react";
 import pdf from "../assets/resume.pdf";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Contact from "../pages/Contact";
 
 const ResumeViewer = () => {
   return (
@@ -16,7 +17,7 @@ const ResumeViewer = () => {
           </button>
         </Link>
 
-        <main className="flex flex-col mt-3 items-center justify-center md:px-0 h-full z-10">
+        <main className="flex flex-col mt-3 items-center justify-center md:px-0 h-full">
           <iframe
             title="resume"
             src={pdf}
@@ -26,6 +27,7 @@ const ResumeViewer = () => {
             className="max-h-screen  "
           />
         </main>
+        <Contact />
         <ul className="circles max-h-screen z-0">
           <li></li>
           <li></li>
