@@ -122,11 +122,27 @@ export const project = [
     link: "https://cam-library.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     img: "https://dl.dropboxusercontent.com/scl/fi/z378tjxtu8mm0goe6kf5c/Screenshot-2024-03-11-112258.png?rlkey=ev6gfd3ae1wzicoyc1utyj0md&dl=0",
     title: "Country Catalog",
     description:
       "Country Catalog is a website that helps users to know about the countries and their details.",
     link: "https://countries-catalog-kappa.vercel.app/",
+  },
+  {
+    id: 4,
+    img: "https://dl.dropboxusercontent.com/scl/fi/g6s7ekojax59b95tgqprr/Untitled-design.jpg?rlkey=3konbdql9laloaz073lz6m7zj&e=1&st=pvm2qyls&dl=0",
+    title: "E-attendance Mobile App",
+    description:
+      "E-Attendance Application (Mobile App): Developed as my project report for the defense of my final year using Express.js for the backend, React JS for web frontend and React Native for the frontend. Features included Attendance Recording, Geolocating with Range Detection(Location filter), Real-Time Tracking, Mobile and QR code Check In/Check Out, and management of Students, Teams, Classes, and Subjects",
+    link: "https://github.com/Momsombrathna/E-attendance-Frontend",
+  },
+  {
+    id: 5,
+    img: "https://dl.dropboxusercontent.com//scl/fi/x5i9jgq93ofmgh31fywmt/Screenshot-2025-02-24-025042.png?rlkey=vrvdn0fpcrpj83x1u5v0p61wq&e=1&st=g7l7lhrf&dl=0",
+    title: "E-attendance Web App",
+    description:
+      "E-Attendance Application (Web): Features included Admin Dashboard, Attendance Recording, Geolocating with Range Detection(Location filter), Real-Time Tracking, Mobile and QR code Check In/Check Out, and management of Students, Teams, Classes, and Subjects",
+    link: "https://e-attendance-web-one.vercel.app/",
   },
 ];
