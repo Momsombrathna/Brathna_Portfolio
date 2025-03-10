@@ -145,4 +145,12 @@ export const project = [
       "E-Attendance Application (Web): Features included Admin Dashboard, Attendance Recording, Geolocating with Range Detection(Location filter), Real-Time Tracking, Mobile and QR code Check In/Check Out, and management of Students, Teams, Classes, and Subjects",
     link: "https://e-attendance-web-one.vercel.app/",
   },
+  {
+    id: 6,
+    img: "https://dl.dropboxusercontent.com/scl/fi/dtsaq0y5eykah6uzwnmwg/Screenshot-2025-03-10-120523.png?rlkey=6jajttwkwltjvzdkry3dyttmy&e=1&st=nuipcqox&dl=0",
+    title: "E-attendance Report Document",
+    description:
+      "E-Attendance Application (Report Document): Features included Admin Dashboard, Attendance Recording, Geolocating with Range Detection(Location filter), Real-Time Tracking, Mobile and QR code Check In/Check Out, and management of Students, Teams, Classes, and Subjects",
+    link: "/report",
+  },
 ];
