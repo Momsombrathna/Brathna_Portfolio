@@ -151,6 +151,6 @@ export const project = [
     title: "E-attendance Report Document",
     description:
       "E-Attendance Application (Report Document): Features included Admin Dashboard, Attendance Recording, Geolocating with Range Detection(Location filter), Real-Time Tracking, Mobile and QR code Check In/Check Out, and management of Students, Teams, Classes, and Subjects",
-    link: "/report",
+    link: "https://drive.google.com/file/d/1zSX0jwFGCi6qVnpjz1L9AiV1_YnjeACx/view",
   },
 ];
