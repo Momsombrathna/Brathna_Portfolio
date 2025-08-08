@@ -5,7 +5,7 @@ const ProjectCard = ({ item }) => {
 
   return (
     <>
-      <div class=" w-full rounded-lg flex justify-center  shadow bg-indigo-800">
+      <div class=" w-full rounded-lg flex justify-center  shadow backdrop-blur">
         <div className="flex flex-col">
           <a
             href={link}

@@ -61,10 +61,15 @@ body {
 }
 
 .area {
+  position: fixed; /* Changed from relative/absolute to fixed */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: #4e54c8;
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
-  width: 100%;
-  height: 100vh;
+  overflow: hidden;
+  z-index: -1; /* Ensure it stays behind content */
 }
 
 .circles {
@@ -189,76 +194,73 @@ body {
 }
 
 /* ******** Avatar border********** */
-body {
-  animation: gradient 5s ease infinite;
-  background-size: 200% 200%;
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-@keyframes gradient {
-  0% {
-    background: rgb(65, 41, 90); /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      rgb(47, 7, 67),
-      rgb(65, 41, 90)
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      rgb(47, 7, 67),
-      rgb(65, 41, 90)
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
-  50% {
-    background: rgb(168, 0, 119); /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      rgb(168, 0, 119),
-      rgb(102, 255, 0)
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      rgb(168, 0, 119),
-      rgb(102, 255, 0)
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
-  100% {
-    background: rgb(65, 41, 90); /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      rgb(47, 7, 67),
-      rgb(65, 41, 90)
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      rgb(47, 7, 67),
-      rgb(65, 41, 90)
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
-}
-
-.avatar {
-  --border-color: rgb(143, 148, 251);
-  --background-color: rgb(46, 160, 23);
-  --avatar-size: 150px;
-  height: var(--avatar-size);
-  width: var(--avatar-size);
-  border: 4px solid var(--border-color);
-  padding: 6px;
-  border-radius: 50%;
+.avatar-glow {
   position: relative;
-  animation: glow 3s ease-in-out infinite; /* Add this line */
-  /* ... rest of your code ... */
+  width: 200px; /* Adjust size */
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  /* Create the rotating rainbow border with a conic gradient */
+  background: #111; /* Dark background behind avatar */
+  padding: 6px; /* Thickness of the border */
+
+  /* Use a pseudo-element for the animated rainbow border */
 }
 
-/* Add this keyframes rule */
-@keyframes glow {
-  0%,
-  100% {
-    box-shadow: 0 0 5px rgb(143, 148, 251), 0 0 10px rgb(143, 148, 251),
-      0 0 15px rgb(143, 148, 251), 0 0 20px rgb(143, 148, 251);
+.avatar-glow::before {
+  content: "";
+  position: absolute;
+  top: -6px; /* match padding */
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  animation: rotateBorder 6s linear infinite;
+  z-index: 1;
+}
+
+.avatar-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transition: filter 0.5s ease-in-out;
+  box-sizing: border-box;
+  border: 3px solid transparent;
+  filter: contrast(1.1) brightness(1);
+}
+
+/* Rotate the rainbow border */
+@keyframes rotateBorder {
+  from {
+    transform: rotate(0deg);
   }
-  50% {
-    box-shadow: 0 0 20px rgb(143, 148, 251), 0 0 30px rgb(143, 148, 251),
-      0 0 40px rgb(143, 148, 251), 0 0 50px rgb(143, 148, 251);
+  to {
+    transform: rotate(360deg);
   }
 }
+
+/* ********* Rainbow Border ********* */

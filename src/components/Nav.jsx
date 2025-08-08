@@ -167,7 +167,7 @@ function Nav(props) {
   return (
     <>
       <div className="">
-        <nav className="fixed bg-inherit top-0 z-10 w-full backdrop-blur-sm shadow-md h-auto rounded-none py-1 px-2 lg:px-4 lg:py-2 ">
+        <nav className="fixed bg-inherit top-0 z-10 w-full backdrop-blur-sm h-auto rounded-none py-1 px-2 lg:px-4 lg:py-2 ">
           <div className="flex items-center justify-evenly text-white">
             <Typography
               as="a"
