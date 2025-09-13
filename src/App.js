@@ -1,8 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./views/Home";
-import ReportViewer from "./views/ReportViewer";
-import ResumeViewer from "./views/ResumeViewer";
+// import ReportViewer from "./views/ReportViewer";
+// import ResumeViewer from "./views/ResumeViewer";
 
 function App() {
   return (
